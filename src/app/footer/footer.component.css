@@ -1,0 +1,19 @@
+.footerstyle{
+  background: #0e0e0e;
+    /* border-top: 4px solid #0e0e0e; */
+    font-size: 0.9em;
+    color: #fff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 75%;
+  height: 50px;
+}
+.spanstyle1{
+  position: relative;
+  top: -5px;
+  LEFT: 4PX;
+}
+

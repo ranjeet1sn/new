@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+.titlesty{
+  position: relative;
+    left: 137px;
+    font-size: 24px;
+}
+
+.btnsty{
+  border-radius: 12px
+}
+.eye{
+  cursor: pointer;
+  float: right;
+}
+.sty{
+  border-bottom: unset !important;padding: unset ;width: 70%
+}
+.formsty{
+  margin-left: 10px
+}
+.btnsty{
+  margin-top: 15px; border-radius: 12px;  background: #ea2330;color: #fff;
+}

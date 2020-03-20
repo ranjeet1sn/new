@@ -1,0 +1,113 @@
+.toolstyle{
+  background-color: #009efb;top: 0;position: fixed;
+  z-index: 1000;
+}
+.spanstyle{
+  flex: auto;
+  color: #fff;
+}
+.mtstyle{
+  position: relative;
+  top: 27px;
+  left: -37px;
+}
+.imgstyle{
+  width: 80px;
+  height: 26px;
+  margin-top: 6px;
+}
+.cardstyle{
+  margin-top: 25px;
+  position: relative;
+  top: 53px;
+
+}
+.container{
+width: 100%;
+margin: 5em auto;
+padding: 0;
+background: #fff;
+}
+.items{
+max-width: 300px;
+height: 300px;
+background: #ECECEC;
+}
+#left,#right{
+margin: 30px;
+}
+img{
+height: 170px;
+/* width: 190px; */
+}
+.imgsty{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 23%;
+}
+.btnstyle{
+  float: right;
+  background: #ff9f00;
+  color:#fff;
+}
+::ng-deep .carousel-item {
+display: block !important;
+position: absolute;
+transform: translateX(100%);
+opacity: 0;
+transition:all  1s;
+}
+.style{
+top: -40px;position:relative;margin:10px !important;
+}
+::ng-deep .carousel-item.active {
+position: relative;
+transform: translateX(0);
+opacity: 1;
+top: 0;
+}
+.img{
+  width: 105px;
+  height: 81px;
+}
+.slick-slide {
+outline: none
+}
+:focus {outline:0 !important;}
+.img:hover{
+  width: 110px;
+}
+.lestyle{
+  position: relative;
+  left: -1px;
+  top: -10px;
+  font-size: 17px;
+  font-weight: 500;
+  /* line-height: 22px; */
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+.dvsty{
+  margin-top: 65px;position: relative;
+       top: 9px;
+    margin-bottom: 18px;
+}
+.imgsty{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.sty{
+  opacity: .6;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.float {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: blue;
+  z-index: 1000;
+}

@@ -1,0 +1,30 @@
+
+<div  class="wrapper" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center" [@list1]>
+<mat-card class="cardstyle" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center">
+  <mat-card-content>
+<form [formGroup]="addproduct" (ngSubmit)="onSubmit()">
+  <h3>Add Room</h3>
+  <hr>
+  <mat-form-field appearance="outline" class="sty">
+    <input matInput type="text" placeholder="Enter Location"  formControlName="location">
+  </mat-form-field>
+  <mat-form-field appearance="outline"  class="sty">
+    <input matInput type="number" placeholder="Enter price"  formControlName="price">
+  </mat-form-field><br>
+  <mat-form-field appearance="outline"  class="sty">
+    <input matInput type="text" placeholder="Enter Description"  formControlName="description">
+  </mat-form-field>
+  <mat-form-field appearance="outline"  class="sty">
+    <input matInput type="text" placeholder="Enter mobile no"  formControlName="no">
+  </mat-form-field><br>
+  <mat-form-field style="position: relative;" appearance="outline"  class="sty">
+    <ngx-mat-file-input type="file" #fileuploader formControlName="image" (change)="showPreview($event)"></ngx-mat-file-input><mat-icon style="float: right;cursor: pointer;">folder</mat-icon></mat-form-field>
+    <button mat-raised-button color="primary" class="btnstyle" >Add</button><br>
+    <label class="sty" >Image Preview</label>
+  <div class="sty">
+    <img [src]="imgsrc" alt="" width="150px" height="130px" (click)="fileuploader.click()">
+  </div>
+</form>
+</mat-card-content>
+</mat-card>
+</div>

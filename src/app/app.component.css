@@ -1,0 +1,7 @@
+.float {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: blue;
+  z-index: 1000;
+}

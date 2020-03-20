@@ -1,0 +1,27 @@
+<form  [formGroup]="helpForm" (ngSubmit)="onSubmit()">
+  <h4> Feedback Form</h4>
+  <mat-icon class="iconsty" (click)="close()">close</mat-icon>
+  <mat-divider></mat-divider>
+  <mat-form-field class="sty">
+    <label > Full Name</label>
+    <input type="text" matInput formControlName="name" required>
+  </mat-form-field>
+  <mat-form-field class="sty">
+    <label > Email Address</label>
+    <input type="email" matInput formControlName="email" required>
+  </mat-form-field><br>
+  <mat-form-field class="sty">
+    <label > Subject</label>
+    <input type="text" matInput formControlName="subject" required>
+  </mat-form-field>
+  <mat-form-field class="sty">
+    <label > Mobile No</label>
+    <input type="number" matInput formControlName="no" required>
+  </mat-form-field><br>
+  <mat-form-field class="sty">
+    <label > Description</label>
+   <textarea name="" matInput formControlName="description" required></textarea>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary" class="sty" type="submit">Submit</button>
+  <button mat-raised-button color="warn" class="sty" type="button" (click)="resetForm()">Reset</button>
+</form>

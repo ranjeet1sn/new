@@ -1,0 +1,43 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" #sidenav style="background-color: #fff;width: 250px;">
+    <span style="font-size: 20px;color:#607d8b;
+     position: relative;
+    top: 7px;
+    left: 8px;">Welcome! {{name}}</span>
+    <img src="../../assets/user.png" alt="" mat-card-avatar class="img">
+    <p class="pstyle"> {{email}}</p>
+    <hr>
+      <mat-list-item  >
+      <li disableRipple mat-menu-item   [routerLink]="['/owner/addroom']"  >
+        <mat-icon class="hs">home_work</mat-icon>
+       <strong class="hs">Add Room</strong>
+      </li>
+        </mat-list-item>
+        <mat-list-item  >
+        <li disableRipple mat-menu-item  [routerLink]="['/owner/viewroom']"  >
+          <mat-icon class="hs">storefront</mat-icon>
+         <strong class="hs">View Room</strong>
+        </li>
+          </mat-list-item>
+  </mat-sidenav>
+  <mat-sidenav-content style="background-color: #eee;">
+    <mat-toolbar color="primary" class="toolstyle">
+      <button mat-icon-button disableRipple (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Owner Panel</span>
+      <div fxLayout="row" fxFlex fxLayoutAlign="flex-end center">
+        <ul fxLayout="row" fxLayoutGap="5px">
+          <li>
+              <button mat-button class="btstyle" (click)="logout()">
+                <mat-icon >lock_open</mat-icon>
+                Logout <br>
+              </button>
+              </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <!-- <img class="imgstyle" src="../../assets/ball_glass_transparent_reflection_grass_49764_300x168.jpg"> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

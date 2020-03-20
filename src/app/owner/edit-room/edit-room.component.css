@@ -1,0 +1,13 @@
+.sty{
+  margin-left: 10px;
+}
+.btnstyle{
+  position: relative;
+    left: 19px;
+}
+.iconsty{
+  float: right;
+  margin-top: -33px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,44 @@
+
+<mat-toolbar style="background-color: #0093e4;
+padding: 1.3rem;
+">
+<h6 style="color: #fff;">Add a review</h6>
+<mat-icon style="color: #fff;float: right;flex: auto;cursor: pointer;" align="end" (click)="close()">close</mat-icon>
+</mat-toolbar>
+<div>
+  <label style=" color: #2C3E50;
+    position: relative;
+    left: 11px;
+    width: 442px;
+    padding-right: 23px;">Feedback</label><br>
+<mat-form-field appearance="outline" style="width: 562px;
+position: relative;
+left: 7px;">
+  <textarea matInput ></textarea>
+</mat-form-field>
+<p  style=" color: #2C3E50;
+margin-top: 7px;
+position: relative;
+left: 12px;
+top: 5px;
+">Overall</p>
+<star-rating value="5" class="starrating" totalstars="5" checkedcolor="#fde16d" uncheckedcolor="black" size="24px" readonly="false" (rate)="onRate($event)"></star-rating>
+<p class="pstyle label label-info badge-info" *ngIf="value1>0">{{value1}}</p>
+<p  style=" color: #2C3E50;
+margin-top: 7px;
+position: relative;
+left: 12px;
+top: 5px;
+">Nearby Facilities</p>
+<star-rating value="5" class="starrating" totalstars="5" checkedcolor="#fde16d" uncheckedcolor="black" size="24px" readonly="false" (rate)="onRate2($event)"></star-rating>
+<p class="pstyle label label-info badge-info" *ngIf="value2>0">{{value2}}</p>
+<p  style=" color: #2C3E50;
+margin-top: 7px;
+position: relative;
+left: 12px;
+top: 5px;
+">Transport</p>
+<star-rating value="5" class="starrating" totalstars="5" checkedcolor="#fde16d" uncheckedcolor="black" size="24px" readonly="false" (rate)="onRate3($event)"></star-rating>
+<p class="pstyle label label-info badge-info" *ngIf="value3>0">{{value3}}</p>
+<button class="btnst">Submit the review</button>
+</div>

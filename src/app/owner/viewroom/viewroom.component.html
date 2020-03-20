@@ -1,0 +1,35 @@
+<div class="tstyle mat-elevation-z8"   [@list1]>
+  <mat-table mat-table [dataSource]="dataSource" matSort >
+      <ng-container matColumnDef="location">
+        <mat-header-cell mat-sort-header *matHeaderCellDef > Location</mat-header-cell>
+        <mat-cell *matCellDef="let element;let i=index"> {{element.location}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <mat-header-cell mat-sort-header *matHeaderCellDef > Price</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="image">
+          <mat-header-cell *matHeaderCellDef> Image</mat-header-cell>
+            <mat-cell *matCellDef="let element;let i=index" (click)="dialogopen(i)"><img [src]='this.sanitizer.bypassSecurityTrustUrl("data:image/jpeg;base64," + element.image)' style=" width: 31px;
+              margin-top: -3px;cursor: pointer;"> </mat-cell>
+        </ng-container>
+      <ng-container matColumnDef="no">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.no}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Description</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="delete"    [@list2]>
+        <mat-header-cell *matHeaderCellDef mat-sort-headers> </mat-header-cell>
+        <mat-cell *matCellDef="let element" (click)="onDelete(element.id)" style="cursor: pointer;"> <mat-icon color="warn">delete</mat-icon></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef mat-sort-headers></mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="onEdit(element,element.id)" style="cursor: pointer;"> <mat-icon color="primary">edit</mat-icon></mat-cell>
+  </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

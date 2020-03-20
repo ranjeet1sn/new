@@ -1,0 +1,39 @@
+<div class="wrapper" >
+  <mat-card style="background: honeydew;">
+    <mat-card-header>
+      <mat-card-title >Register</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="formsty">
+          <label>Name</label>
+          <input type="text" matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field  class="formsty">
+          <label>Email</label>
+          <input type="email" matInput formControlName="email">
+        </mat-form-field><br>
+        <mat-form-field  class="formsty">
+          <label for="">Password</label>
+          <input type="password" #x matInput formControlName="password" class="sty">
+          <a (click)="x.type=x.type=='password'?'text':'password'">
+            <mat-icon class="eye">remove_red_eye</mat-icon>
+          </a>
+        </mat-form-field>
+        <mat-form-field  class="formsty" style="
+         position: relative;
+        top: 31px;">
+          <mat-label>Register As</mat-label>
+          <mat-select matNativeControl required formControlName="role">
+            <mat-option value="owner">Owner</mat-option>
+            <mat-option value="user">User</mat-option>
+          </mat-select>
+        </mat-form-field><br>
+        <button type="submit" mat-raised-button  class="formsty btnsty" >Register</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,45 @@
+.style{
+  width: fit-content;
+  margin-top: 76px;
+}
+.sty{
+  text-align: center;
+  font-size: 1.1rem;
+}
+.style:hover{
+  top: 4px;
+  bottom: 2px;
+}
+.cursorsty{
+  cursor: pointer;
+}
+.img{
+  max-width: 103%;
+  height: 136px;
+}
+.searchstyle{
+  position: relative;
+  top: 70px;
+  margin: 0 auto;
+  padding-left: 89px;
+}
+.iconstyle{
+  padding-left: 301px;
+  padding-top: 3px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.sortsty{
+  float: right;
+  position: relative;
+  top: 91px;
+  right: 108px;
+}
+.pstyle{
+  float: right;
+  /* right: -20px; */
+  position: relative;
+  right: 324px;
+  top: 119px;
+
+}

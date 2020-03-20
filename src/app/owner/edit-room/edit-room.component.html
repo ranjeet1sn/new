@@ -1,0 +1,23 @@
+
+<div  class="wrapper" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center">
+  <form [formGroup]="addproduct" (ngSubmit)="onSubmit()">
+    <h3>Edit Room</h3>
+    <mat-icon class="iconsty" (click)="close()">close</mat-icon>
+    <hr>
+    <mat-form-field appearance="outline" class="sty">
+      <input matInput type="text" placeholder="Enter Location" [(ngModel)]="location"  formControlName="location">
+    </mat-form-field>
+    <mat-form-field appearance="outline"  class="sty">
+      <input matInput type="number" placeholder="Enter price" [(ngModel)]="price"  formControlName="price">
+    </mat-form-field><br>
+    <mat-form-field appearance="outline"  class="sty">
+      <input matInput type="text" placeholder="Enter Description"  [(ngModel)]="description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field appearance="outline"  class="sty">
+      <input matInput type="text" placeholder="Enter mobile no" [(ngModel)]="no"  formControlName="no">
+    </mat-form-field><br>
+    <mat-form-field style="position: relative;" appearance="outline"  class="sty">
+      <ngx-mat-file-input type="file" formControlName="image" (change)="showPreview($event)"></ngx-mat-file-input><mat-icon style="float: right;cursor: pointer;">folder</mat-icon></mat-form-field>
+      <button mat-raised-button color="primary" class="btnstyle" >Update</button><br>
+  </form>
+  </div>

@@ -1,0 +1,40 @@
+<div>
+  <mat-toolbar class="toolbarstyle">
+    <img src="https://www.gopgo.in/assets/logos/t_logo_100_37-17b31747295b6cada6382612a2ecd28446f4bf9ca77ce4bafa28d5f68dea68fc.png" style="width:45px">
+    <span class="example-spacer"></span>
+    <div>
+      <a mat-button [hidden]="cond2" disableRipple>
+        <mat-icon> home</mat-icon>Home
+      </a>
+      <a mat-button [hidden]="cond2" disableRipple>
+        <mat-icon>menu</mat-icon>Category
+      </a>
+    </div>
+    <div fxShow="true" fxHide.lt-md="true" fxLayout="row" fxFlex fxLayoutAlign="flex-end center">
+      <a mat-button (click)="chk()" [hidden]="cond" disableRipple>
+        <mat-icon>account_circle</mat-icon>Register
+      </a>
+      <a mat-button (click)="chk2()" [hidden]="cond" disableRipple>
+        <mat-icon>input</mat-icon>Login
+      </a>
+      <a mat-button [hidden]="cond2" (click)="logout()" disableRipple>
+        <mat-icon>input</mat-icon>Logout
+      </a>
+    </div>
+    <div fxShow="true" fxHide.gt-sm="true" fxLayout="row" fxFlex fxLayoutAlign="flex-end center" disableRipple>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu" #trigger="matMenuTrigger" (mouseenter)="trigger.openMenu()" disableRipple>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+        <a mat-button [hidden]="cond" (click)="chk()">
+          <mat-icon>account_circle</mat-icon>Register
+        </a><br>
+        <a mat-button [hidden]="cond" (click)="chk2()">
+          <mat-icon>input</mat-icon>Login
+        </a>
+        <a mat-button [hidden]="cond2" (click)="logout()">
+          <mat-icon>input</mat-icon>Logout
+        </a>
+      </mat-menu>
+    </div>
+  </mat-toolbar>

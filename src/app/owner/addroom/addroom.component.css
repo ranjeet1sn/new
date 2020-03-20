@@ -1,0 +1,31 @@
+.previewstyle{
+  position: relative;
+  top: -25px;
+  left: 8px;
+}
+.sty{
+  margin-left: 10px;
+}
+.btnstyle{
+  position: relative;
+    left: 19px;
+}
+.iconstyle{
+  float: right;
+    position: relative;
+    top: -38px;
+    cursor: pointer;
+}
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 50px;
+    width: fit-content;
+    height: fit-content;
+  }
+

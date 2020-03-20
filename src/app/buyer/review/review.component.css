@@ -1,0 +1,36 @@
+.mat-dialog-container{
+  padding: 0 !important;
+}
+.starrating{
+  position: relative;
+    left: 10px;
+    top: -9px;
+}
+.pstyle{
+  position: relative;
+left: 135px;
+top: -37px;
+margin-bottom: -13px;
+display: inline-block;
+padding: .25em .4em;
+line-height: 1;
+text-align: center;
+vertical-align: baseline;
+border-radius: .25rem;
+}
+.btnst{
+  color: #fff;
+    border-color: #0093e4;
+    background-color: #0093e4;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    font-weight: 600;
+    font-size: .875rem;
+    padding: .625rem 1.25rem;
+    letter-spacing: .025em;
+    white-space: inherit;
+    border-radius: 6px;
+    float: right;
+    position: relative;
+    top: -8px;
+    left: -6px;
+}
